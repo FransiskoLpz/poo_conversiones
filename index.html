@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor de Unidades</title>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center">Conversor de Unidades</h1>
+
+      <!-- Menú de pestañas -->
+      <ul class="nav nav-tabs" id="conversionTabs" role="tablist">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            id="kg-g-tab"
+            data-toggle="tab"
+            href="#kg-g"
+            role="tab"
+            aria-controls="kg-g"
+            aria-selected="true"
+            >Kg y Gramos</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            id="km-m-tab"
+            data-toggle="tab"
+            href="#km-m"
+            role="tab"
+            aria-controls="km-m"
+            aria-selected="false"
+            >Km y Metros</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            id="c-d-tab"
+            data-toggle="tab"
+            href="#c-d"
+            role="tab"
+            aria-controls="c-d"
+            aria-selected="false"
+            >Córdobas y Dólares</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            id="m-cm-tab"
+            data-toggle="tab"
+            href="#m-cm"
+            role="tab"
+            aria-controls="m-cm"
+            aria-selected="false"
+            >Metros y Cm</a
+          >
+        </li>
+      </ul>
+
+      <!-- Contenido de las pestañas -->
+      <div class="tab-content p-3 border">
+        <div
+          class="tab-pane fade show active"
+          id="kg-g"
+          role="tabpanel"
+          aria-labelledby="kg-g-tab"
+        >
+          <h3>Kg y Gramos</h3>
+          <input type="number" id="kg" placeholder="Ingresa valor en Kg" />
+          <input
+            type="number"
+            id="grams"
+            placeholder="Ingresa valor en Gramos"
+          />
+        </div>
+
+        <div
+          class="tab-pane fade"
+          id="km-m"
+          role="tabpanel"
+          aria-labelledby="km-m-tab"
+        >
+          <h3>Km y Metros</h3>
+          <input type="number" id="km" placeholder="Ingresa valor en Km" />
+          <input
+            type="number"
+            id="meters"
+            placeholder="Ingresa valor en Metros"
+          />
+        </div>
+
+        <div
+          class="tab-pane fade"
+          id="c-d"
+          role="tabpanel"
+          aria-labelledby="c-d-tab"
+        >
+          <h3>Córdobas y Dólares</h3>
+          <input type="number" id="cordoba" placeholder="Córdobas" />
+          <input type="number" id="dollar" placeholder="Dólares" />
+        </div>
+
+        <div
+          class="tab-pane fade"
+          id="m-cm"
+          role="tabpanel"
+          aria-labelledby="m-cm-tab"
+        >
+          <h3>Metros y Cm</h3>
+          <input
+            type="number"
+            id="metersCm"
+            placeholder="Ingresa valor en Metros"
+          />
+          <input type="number" id="cm" placeholder="Ingresa valor en Cm" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Agregar los scripts de Bootstrap y jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

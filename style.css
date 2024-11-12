@@ -1,0 +1,136 @@
+/* Fondo degradado en el body */
+body {
+  background: linear-gradient(135deg, #a2f5d9, #87e7f9, #c2f7b6);
+  font-family: "Roboto", sans-serif;
+  color: #1a3a5f; /* Azul marino para el texto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Hacer que el body ocupe toda la altura de la pantalla */
+  margin: 0;
+}
+
+/* Título */
+h1 {
+  font-weight: 700;
+  background: linear-gradient(to right, #1a3a5f, #3a5c8f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+  font-size: 2.5rem; /* Aumentar tamaño de fuente */
+}
+
+/* Contenedor */
+.container {
+  max-width: 700px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Pestañas de navegación */
+.nav-tabs {
+  border-bottom: 2px solid #1a3a5f;
+  position: relative; /* Necesario para posicionar el pseudo-elemento */
+}
+
+.nav-tabs .nav-link {
+  color: #1a3a5f;
+  font-weight: 500;
+  border: none;
+  transition: color 0.3s;
+  font-size: 1.2rem; /* Tamaño de fuente ajustado */
+  position: relative; /* Necesario para el pseudo-elemento */
+}
+
+.nav-tabs .nav-link.active {
+  background: linear-gradient(to right, #1a3a5f, #3a5c8f);
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+/* Efecto de barrido en las pestañas */
+.nav-tabs .nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #3a5c8f;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-tabs .nav-link.active::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Contenido de las pestañas */
+.tab-content {
+  padding: 20px;
+  border: 1px solid #e9ecef;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  background-color: #ffffff;
+}
+
+h3 {
+  font-weight: 600;
+  color: #1a3a5f; /* Azul marino */
+  margin-bottom: 15px;
+  font-size: 1.6rem; /* Aumentar tamaño de los subtítulos */
+}
+
+/* Campos de entrada */
+input[type="number"] {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+  border-color: #1a3a5f;
+  box-shadow: 0 0 5px rgba(26, 58, 95, 0.5); /* Azul marino */
+}
+
+/* Efectos de hover */
+.nav-link:hover {
+  color: #3a5c8f;
+}
+
+input[type="number"]::placeholder {
+  color: #999999;
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+  body {
+    padding: 20px; /* Espaciado adicional en pantallas pequeñas */
+  }
+
+  .container {
+    padding: 20px;
+    max-width: 100%; /* El contenedor ocupa todo el ancho en pantallas pequeñas */
+  }
+
+  h1 {
+    font-size: 2rem; /* Reducir tamaño del título en pantallas pequeñas */
+  }
+
+  .nav-tabs .nav-link {
+    font-size: 1rem; /* Reducir tamaño de las pestañas */
+  }
+
+  h3 {
+    font-size: 1.4rem; /* Reducir tamaño de los subtítulos */
+  }
+}
